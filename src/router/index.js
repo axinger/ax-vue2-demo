@@ -163,15 +163,36 @@ export const constantRoutes = [
   {
     path: '/test',
     component: Layout,
+    redirect: '/test1',
+    name: '测试',
+    meta: {
+      title: '测试项目',
+      icon: 'nested'
+    },
     children: [
       {
-        path: 'index',
+        path: '/test1',
         name: '测试',
         component: () => import('@/views/test/index'),
-        meta: { title: '测试', icon: 'form' }
-      }
+        meta: { title: '测试1', icon: 'form' }
+      },
+      {
+        path: '/testPinia',
+        component: () => import('@/views/test/testPinia.vue'),
+        name: '测试2',
+        meta: { title: '测试2', icon: 'form' },
+        hidden: true
+      },
     ]
   },
+
+
+  // {
+  //   path: '/testPinia',
+  //   component: () => import('@/views/test/testPinia.vue'),
+  //   hidden: true
+  // },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
