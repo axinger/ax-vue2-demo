@@ -3,6 +3,9 @@
     <h3>测试页面</h3>
     <button @click="pinia">pinia</button>
 
+    <h3>测试页面</h3>
+   <router-link to="/testDiv">布局</router-link>
+
   </div>
 </template>
 
