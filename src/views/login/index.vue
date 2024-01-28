@@ -221,7 +221,8 @@ $light_gray: #eee;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: orange;
+    //background: orange;
+    background: darkgrey;
     padding: 40px;
 
     //方式3--不行
