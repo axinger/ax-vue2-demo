@@ -182,8 +182,20 @@ export const constantRoutes = [
         name: '测试2',
         meta: { title: '测试2', icon: 'form' },
         hidden: true
-      }
+      },
 
+      {
+        path: '/test02_sass',
+        name: 'scss样式',
+        component: () => import('@/views/test/test02_scss.vue'),
+        meta: { title: 'scss', icon: 'form' }
+      },
+      {
+        path: '/test03_css_动画',
+        name: 'css动画',
+        component: () => import('@/views/test/test03_css_动画.vue'),
+        meta: { title: 'css动画', icon: 'form' }
+      },
     ]
   },
 
