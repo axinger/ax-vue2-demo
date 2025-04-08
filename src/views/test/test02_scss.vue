@@ -12,7 +12,6 @@
 </template>
 
 <style scoped lang="scss">
-
 .div0 {
   font-size: 30px;
   border: 1px solid #ccc;
@@ -21,7 +20,7 @@
 
   //height: 200px;
 
-  .div3{
+  .div3 {
     background-color: #20a0ff;
     //margin-top: 40px;
     //padding: 1em;
@@ -41,7 +40,6 @@
   margin-top: 10px;
   border-color: red;
 }
-
 </style>
 <script setup lang="ts">
 </script>
