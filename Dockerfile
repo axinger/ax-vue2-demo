@@ -1,4 +1,4 @@
-FROM nginx:1.23.2-alpine
+FROM nginx:1.27.4-alpine-slim
 
 # 删除nginx 默认配置
 RUN rm /etc/nginx/conf.d/default.conf
