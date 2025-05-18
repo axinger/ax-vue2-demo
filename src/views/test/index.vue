@@ -15,7 +15,7 @@
 
     <div>
       <input v-model="apiData">
-      <p>同步更新为: {{ apiData }}</p>
+      <p>同步更新为1: {{ apiData }}</p>
     </div>
 
     <button @click="testApi">api</button>
