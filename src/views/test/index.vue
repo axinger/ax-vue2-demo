@@ -1,15 +1,16 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <div>
     <h1>测试页面</h1>
 
     <h3>测试1</h3>
-    <button @click="pinia">pinia</button>
 
-    <button @click="pinia2">新窗口</button>
+    <p>pinia中的num：{{ test.num }}</p>
+    <el-button type="primary" @click="pinia">pinia</el-button>
+
+    <el-button type="primary" @click="pinia2">新窗口</el-button>
 
     <h3>测试2</h3>
-
-    <button @click="testDiv">布局</button>
+    <el-button type="primary" @click="testDiv">布局</el-button>
 
     <h3>测试3</h3>
 
@@ -17,8 +18,7 @@
       <input v-model="apiData">
       <p>同步更新为1: {{ apiData }}</p>
     </div>
-
-    <button @click="testApi">api</button>
+    <el-button type="primary" @click="testApi">api</el-button>
 
     <el-divider style="border-color: #ff6b6b;"></el-divider>
     <el-divider style="border-color: #3498db;" />
@@ -41,6 +41,7 @@
 
 <script>
 import request from '@/utils/request'
+import Test from "@/store/test";
 
 export default {
   components: {},
@@ -48,16 +49,18 @@ export default {
   data() {
     return {
       apiData:'初始化',
+      // 创建Test的pinia实例
+      test: Test()
     }
   },
   methods: {
 
     pinia() {
-      this.$router.push('/testPinia')
+      this.$router.push('testPinia')
     },
 
     pinia2() {
-      const routeData = this.$router.resolve({ path: '/testPinia', query: { id: 1 }})
+      const routeData = this.$router.resolve({ path: '/test1/testPinia', query: { id: 1 }})
       window.open(routeData.href, '_blank')
     },
 

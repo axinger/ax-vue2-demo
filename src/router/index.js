@@ -179,16 +179,16 @@ export const constantRoutes = [
         name: "测试",
         component: () => import("@/views/test/index"),
         meta: { title: "测试1", icon: "form" },
-
         children: [
-          {
-            path: "/testPinia",
-            component: () => import("@/views/test/test01/test01_pinia.vue"),
-            name: "测试2",
-            meta: { title: "测试2", icon: "form" },
-            hidden: true,
-          },
         ],
+      },
+
+      {
+        path: "/testPinia",
+        component: () => import("@/views/test/test01/test01_pinia.vue"),
+        name: "测试2",
+        meta: { title: "测试2", icon: "form" },
+        hidden: true,
       },
 
       {
@@ -226,7 +226,7 @@ export const constantRoutes = [
 
   {
     path: "/testDiv",
-    component: () => import("@/views/test/TestDiv.vue"),
+    component: () => import("@/views/test/test01/test01_div布局"),
     name: "布局",
     meta: { title: "布局", icon: "form" },
     // hidden: true

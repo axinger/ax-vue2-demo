@@ -14,7 +14,8 @@
     components: {},
     props: {},
     data() {
-      return {}
+      return {
+      }
     },
     methods: {}
   }
